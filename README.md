@@ -6,7 +6,7 @@ Sistema simples e funcional de **chat com IA**, usando:
 - 🐘 **PHP** no frontend com HTML/CSS  
 - 🌐 Comunicação via HTTP entre PHP e FastAPI  
 - 🔐 Suporte a `.env` com chave da API (Groq ou OpenAI)  
-- 📦 Sem necessidade de Docker — ideal para **testes rápidos** no [Replit](https://replit.com/) ou localmente  
+
 
 ---
 
@@ -29,7 +29,7 @@ Sistema simples e funcional de **chat com IA**, usando:
 - PHP 7.4+
 - Navegador moderno
 - Git (opcional)
-- Opcional: Conta no [Replit](https://replit.com/)
+
 
 ---
 
