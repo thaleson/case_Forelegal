@@ -1,0 +1,63 @@
+# ----------------
+# Python
+# ----------------
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Ambiente virtual
+.venv/
+env/
+venv/
+ENV/
+*.env
+
+# Arquivos de cache
+.cache/
+.pythonlibs/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# PyInstaller
+*.spec
+
+# ----------------
+# PHP
+# ----------------
+*.log
+vendor/
+composer.lock
+
+# Sessões PHP
+session.txt
+*.sess
+
+# ----------------
+# Sistema
+# ----------------
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+
+# Replit
+.replit
+.hidden/
+*.replit.*
+
+# Linux/macOS
+*~
+
+# ----------------
+# Arquivos Sensíveis
+# ----------------
+.env
+.env.*
