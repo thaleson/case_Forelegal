@@ -7,8 +7,8 @@ if (!isset($_SESSION['chat'])) {
     $_SESSION['chat'] = [];
 }
 
-
-if (isset($_POST['reset'])) {
+// Se for resetar
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reset'])) {
     $_SESSION['chat'] = [];
     header("Location: index.php");
     exit;
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user_input'])) {
         ];
     }
 
-    
+    // 🔁 Redireciona após o POST pra evitar reenvio
     header("Location: index.php");
     exit;
 }
