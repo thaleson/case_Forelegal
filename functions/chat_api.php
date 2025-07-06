@@ -2,7 +2,7 @@
 function call_ai_api($input) {
     $data = json_encode(['text' => $input]);
 
-    $ch = curl_init('http://localhost:8501/gerar'); 
+    $ch = curl_init('http://127.0.0.1:8000/gerar'); 
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
     curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);

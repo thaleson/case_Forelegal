@@ -21,13 +21,38 @@
     <div class="chat-box">
         <?php
         if (isset($_SESSION['chat'])) {
-            foreach ($_SESSION['chat'] as $msg) {
+            $total = count($_SESSION['chat']);
+            foreach ($_SESSION['chat'] as $index => $msg) {
                 echo "<div class='bubble user'><strong>Você:</strong> " . htmlspecialchars($msg['pergunta']) . "</div>";
-                echo "<div class='bubble ia'><strong>IA:</strong> " . formatResponse($msg['resposta']) . "</div>";
+
+                if ($index === $total - 1) {
+                    
+                    echo "<div class='bubble ia'><strong>IA:</strong> <span class='resposta-digitando'>" . formatResponse($msg['resposta']) . "</span></div>";
+                } else {
+                    
+                    echo "<div class='bubble ia'><strong>IA:</strong> " . formatResponse($msg['resposta']) . "</div>";
+                }
             }
         }
         ?>
     </div>
 </div>
+
+<!-- Script -->
+<script>
+    const el = document.querySelector('.resposta-digitando');
+    if (el) {
+        const texto = el.innerText;
+        el.innerText = '';
+        let i = 0;
+        const intervalo = setInterval(() => {
+            el.innerText += texto.charAt(i);
+            i++;
+            if (i >= texto.length) {
+                clearInterval(intervalo);
+            }
+        }, 20); 
+    }
+</script>
 </body>
 </html>
